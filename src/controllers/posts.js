@@ -2,9 +2,9 @@ const { Posts, Users } = require('../db/models')
 
 async function createNewPost(userId, title, body) {
   const post = await Posts.create({
-    title,
-    body,
-    userId,
+    title : title,
+    body : body,
+    userId : userId,
   })
 
   return post
